@@ -1,0 +1,118 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body, html {
+  margin: 0;
+  background-color: #dcbb9a; }
+
+.title-color, #content h1, h2 {
+  color: #893c00; }
+
+#content {
+  background-color: #fff;
+  max-width: 960px;
+  margin: 8px auto;
+  padding-left: 16px;
+  padding-right: 16px; }
+  #content h1 {
+    margin: 0;
+    text-align: center;
+    padding: 16px 0 8px 0;
+    text-transform: uppercase;
+    font-weight: 900; }
+
+.img-border, .img-left, .img-right {
+  border: 2px solid #fff;
+  outline: 2px solid #893c00; }
+
+.img-left {
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 16px; }
+
+.brief {
+  float: left;
+  margin-right: 16px;
+  width: 50%;
+  padding: 16px;
+  background-color: #fadcba;
+  margin-bottom: 16px;
+  color: #000; }
+
+p {
+  color: #000000; }
+
+.img-right {
+  float: right;
+  margin-left: 16px;
+  margin-bottom: 16px; }
+
+a {
+  color: #3d70a1; }
+
+caption {
+  text-align: right; }
+
+table {
+  width: 100%;
+  background: #fff;
+  border-collapse: collapse;
+  margin-bottom: 40px; }
+  table th {
+    background-color: #e0e0e0;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 300;
+    border-right: thin solid #fff; }
+    table th:last-child {
+      border-right: 0; }
+  table th, table td {
+    padding: 8px 16px; }
+  table td {
+    font-size: 14px;
+    border-bottom: thin solid #e0e0e0;
+    color: #000000; }
+
+.form {
+  width: 100%;
+  padding-bottom: 40px; }
+  .form__group {
+    width: 100%;
+    padding: 8px 0; }
+    .form__group--double {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  .form__half {
+    width: 50%; }
+    .form__half:first-child {
+      padding-right: 4px; }
+    .form__half:last-child {
+      padding-left: 4px; }
+  .form__label {
+    display: block;
+    color: #808080;
+    text-transform: uppercase; }
+  .form__field {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border: thin solid #e0e0e0;
+    line-height: 28px;
+    padding-left: 4px; }
+    .form__field--textarea {
+      height: 160px;
+      line-height: initial;
+      padding-top: 4px; }
+  .form__submit {
+    background: transparent;
+    min-width: 240px;
+    text-align: center;
+    padding: 0 8px;
+    border: thin solid #3d70a1;
+    color: #3d70a1;
+    height: 48px;
+    line-height: 46px;
+    font-size: 20px;
+    text-transform: uppercase; }
