@@ -1,0 +1,40 @@
+/* Your styles goes here */
+ul{
+    list-style-type: none;
+}
+.list-container{
+    display: none;
+}
+.list-container.open{
+    display: block;
+}
+.folder, .file{
+    cursor: pointer;
+}
+.file.hovered, .folder.hovered{
+    background-color: rgba(0,0,0,.15)
+}
+.folder .material-icons{
+    color: #d89116;
+}
+.file .material-icons{
+    color: #1694d8;
+}
+.material-icons{
+    vertical-align: text-bottom;
+}
+.basic{
+    width: 400px;
+    max-width: 100%;
+}
+li{
+    line-height: 26px;
+}
+ul{
+    padding-left: 16px;
+}
+.empty{
+    margin-left: -14px;
+    font-style: italic;
+    color: #747474;
+}
