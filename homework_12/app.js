@@ -202,14 +202,16 @@ function app(root, tanksArray){
     while (App.root.firstChild) {
       App.root.removeChild(App.root.firstChild);
     }
-}
+  }
+  App.run = function(){
+    window.addEventListener("hashchange",App.hashChange);
+    window.addEventListener("load",App.hashChange);
+  }
   return App;
 }
 
 let App = app(rootNode, tanks);
-
-window.addEventListener("hashchange",App.hashChange);
-window.addEventListener("load",App.hashChange);
+App.run();
 
 
 
