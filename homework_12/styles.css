@@ -58,6 +58,7 @@ h1 span{
 }
 .tank-layout{
   display: flex;
+  flex-wrap: wrap;
 }
 .view{
   color: #a19e89;
@@ -90,6 +91,7 @@ h1 span{
 .row span:nth-child(1){
   width: 40%;
   border-right: thin solid #a19e89;
+  min-width: 120px;
 }
 .row span:nth-child(2){
   width: 60%;
