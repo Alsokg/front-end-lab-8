@@ -19,7 +19,8 @@ function tank(tankInfo){
     let reg = new RegExp("_","g");
     return option.replace(reg, " ");
   }
-  let details = function(){
+  let details = function(e){
+    e.preventDefault();
     location.hash = Tank.info['hash'];
   }
   let renderFlag = function(){
@@ -114,7 +115,8 @@ function tank(tankInfo){
   }
   Tank.renderThumbnail = function(){
     if (Tank.thumbnailNode === undefined){
-      Tank.thumbnailNode = doc.createElement('div');
+      Tank.thumbnailNode = doc.createElement('a');
+      Tank.thumbnailNode.href = "#";
       Tank.thumbnailNode.className = "thumb-tank";
       Tank.thumbnailNode.onclick = details;
       
@@ -201,7 +203,6 @@ function app(root, tanksArray){
       App.root.removeChild(App.root.firstChild);
     }
 }
-  
   return App;
 }
 
