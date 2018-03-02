@@ -13,7 +13,7 @@ function tank(tankInfo){
   }
   let createHash = function(hash){
     let reg = new RegExp(" ","g");
-    Tank.info['hash'] = hash.replace(reg, "-");
+    Tank.info['hash'] = hash.replace(reg, "-").toLowerCase();
   }
   let getDetailsName = function(option){
     let reg = new RegExp("_","g");
