@@ -6,7 +6,7 @@ function tank(tankInfo){
   Tank.info = [];
   Tank.thumbnailNode;
   Tank.detailsNode;
-  for (var property in tankInfo) {
+  for (let property in tankInfo) {
     if (tankInfo.hasOwnProperty(property)) {
       Tank.info[property] = tankInfo[property];
     }
@@ -146,7 +146,7 @@ function app(root, tanksArray){
   for (let i = 0; i < tanksArray.length; i++){
     App.tanks[i] = tank(tanksArray[i]);
   }
-  var renderBackLink = function(){
+  let renderBackLink = function(){
     let backLink = doc.createElement('a');
     backLink.className = "back-link";
     backLink.href = "#";
@@ -172,7 +172,7 @@ function app(root, tanksArray){
     }
   }
   App.findTankByHash = function(hash){
-    for (var tank of App.tanks){
+    for (let tank of App.tanks){
       if (tank.getHash() === hash){
         return tank;
       }
@@ -182,7 +182,7 @@ function app(root, tanksArray){
   App.renderList = function(){
     let thumbnails = doc.createElement('div');
     thumbnails.className = "thumbnails";
-    for (var tank of App.tanks) {
+    for (let tank of App.tanks) {
       thumbnails.appendChild(tank.renderThumbnail());
     }
     App.root.appendChild(thumbnails);
