@@ -1,0 +1,59 @@
+@import "variables.less";
+@import "replaces.less";
+.blue{
+  color: @blue;
+}
+.bordered-blue{
+  border-bottom: thin solid @blue;
+}
+.preview{
+  border: thin solid @white;
+  &{
+    .-(@i: length(@colors)) when (@i > 0) {
+      @name: extract(@colors, @i);
+        &--@{name} {border-color: @@name}
+        &__title--@{name} {background-color: @@name}
+      .-((@i - 1));
+    }.-;
+  }
+  &__title{
+    text-align: center;
+    color: @white;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    &:hover{
+      color: @white;
+    }
+  }
+}
+.font-small{
+  font-size: 0.875rem;
+}
+.footer{
+  &__text{
+    background-color: @grey;
+    padding: 8px;
+    color: @white;
+  }
+}
+@media (max-width: 991.98px){
+  .pt-t-3{
+    padding-top: 1.5rem;
+  }
+  .mt-t-8{
+    margin-top: 4rem !important;
+  }
+  .preview{
+    &__title{
+      font-size: 0.75rem;
+    }
+  }
+  .footer{
+    &__text{
+      font-size: 0.75rem;
+    }
+  }
+}
+
+
